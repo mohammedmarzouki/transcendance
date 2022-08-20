@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/Link'
 import Image  from 'next/image'
 import Bground  from '../../components/Bground'
 function Home() {
@@ -13,22 +14,24 @@ function Home() {
         ['Settings', 'Adjust everything to your comfort','','/sources/gearF.png','w-full h-[0]  pt-[100%]','flex justify-center items-center'],
         ['Profile', 'invite some friends and see your level, trophies and acheivements','','/sources/prflF.png','w-full h-[0]  pt-[100%]','flex justify-center items-center'],
       ].map(([title, dsc, style, imge, style2, style3]) => (
-
-          <div key={title} className={`backdrop-blur-md bg-gradient-to-r from-white/40 border border-black rounded-[48px] grid grid-cols-2 ${style} `}>
-            <div className=' grid place-items-center lg:grid-rows-2 text-center xl:text-lg 2xl:text-xl text-black'>
-              <div className='md:text-lg xl:text-xl 2xl:text-2xl'> {title}</div>
-              <p className='text-clip hidden lg:block lg:text-ellipsis w-full h-full font-nanum px-2'> {dsc}</p>
-            </div>
-            <div className={`${style3}`}>
-              <div className={`relative ${style2}`}>
-              <Image 
-              src={imge}
-              layout="fill"
-              priority={true}
-              ></Image>
+        <Link href={title.toLocaleLowerCase()}>
+            <div key={title} className={`backdrop-blur-md bg-gradient-to-r from-white/40 border border-black rounded-[48px] grid grid-cols-2 ${style} `}>
+              <div className=' grid place-items-center lg:grid-rows-2 text-center xl:text-lg 2xl:text-xl text-black'>
+                <div className='md:text-lg xl:text-xl 2xl:text-2xl'> {title}</div>
+                <p className='text-clip hidden lg:block lg:text-ellipsis w-full h-full font-nanum px-2'> {dsc}</p>
+              </div>
+              <div className={`${style3}`}>
+                <div className={`relative ${style2}`}>
+                <Image 
+                src={imge}
+                layout="fill"
+                priority={true}
+                ></Image>
+                </div>
               </div>
             </div>
-          </div>
+        </Link>
+
       ))}
       </div>
     </div>
