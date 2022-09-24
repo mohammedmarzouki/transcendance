@@ -11,7 +11,7 @@ function Profile() {
       <Bground />
       <Return />
       {/* <ProfileBlock /> */}
-      <Acheivements ac={[true,true,true,true]} />
+      <Acheivements ac={[false,true,false,true]} />
     </div>
   )
 }

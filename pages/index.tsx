@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Link from 'next/Link'
+import Link from 'next/link'
 import Bground  from '../components/Bground'
 import Glass  from '../components/Glass'
 
@@ -11,7 +11,7 @@ const Home = () => {
       <Bground />
       <Link href="/home">
         <button>
-          <Glass img={undefined} label='kksjdsjip' />
+          <Glass />
         </button>
       </Link>
     </>
