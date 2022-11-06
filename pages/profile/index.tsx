@@ -7,10 +7,9 @@ import {Return}  from '../../components/Return'
 function Profile() {
 
   return (
-    <div className='absolute h-screen w-screen overflow-hidden'>
-      <Bground />
+    <div className='flex justify-between max-w-7xl mx-auto pt-24  '>
       <Return />
-      {/* <ProfileBlock /> */}
+      <ProfileBlock />
       <Acheivements ac={[true,true,true,true]} />
     </div>
   )

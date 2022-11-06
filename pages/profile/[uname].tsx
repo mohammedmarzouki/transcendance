@@ -8,7 +8,6 @@ function Profile() {
 
   return (
     <div className='absolute h-screen w-screen overflow-hidden'>
-      <Bground />
       <Return />
       {/* <ProfileBlock /> */}
       <Acheivements ac={[false,true,false,true]} />

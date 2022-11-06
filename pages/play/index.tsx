@@ -6,7 +6,6 @@ import {Return}  from '../../components/Return'
 function index() {
   return (
       <div className=' '>
-        <Bground/>
         <Return />
         <GameTab />
     </div>
